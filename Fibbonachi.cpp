@@ -1,3 +1,15 @@
+/**
+Copyright 2019 VladG24YT
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+See the License for the specific language governing permissions and limitations under the License.
+*/
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
@@ -5,8 +17,6 @@
 #include <stdlib.h>
 
 using namespace std;
-
-	
 
 int main(int argc, char** argv) 
 {
@@ -19,18 +29,17 @@ int main(int argc, char** argv)
 	
 	unsigned long long int in[94];
 	
-	cout << "Ряд Фиббоначи (до 93 числа)" << endl;
-	cout << "Разработчик: Горский Владислав, учащийся 7 класса <Б> ГБОУ школы № 1598" << endl;
+	cout << "Fibonacci sequence (till the 93rd number)" << endl;
+	cout << "Copyright 2019 Vladislav Gorski\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License. \nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, \nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, \neither express or implied. See the License for the specific language governing permissions and limitations under the License." << endl;
 	cout << endl;
-	cout << "Доступные команды:" << endl;
-	cout << "	View = Вывести первые 93 числа ряда Фиббоначи" << endl;
-	cout << "	CH = Вывести только ЧЁТНЫЕ числа" << endl;
-	cout << "	Non-CH = Вывести только НЕЧЁТНЫЕ числа" << endl;
-	cout << "	Compare = Высчитать и сравнить суммы ЧЁТНЫХ и НЕЧЁТНЫХ чисел" << endl;
-	cout << "	quit = Выход из программы" << endl;
-	cout << "	Certain Число:(число) = Вывод определённого числа" << endl;
-	cout << "	FI = Применить формулу Золотого сечения к числам последовательности Фибоначчи" << endl;
-	cout << "	HELP = Вывести всю информацию о командах" << endl;
+	cout << "Commands:" << endl;
+	cout << "	View = Print the first 93 numbers of the Fibonacci sequence" << endl;
+	cout << "	CH = Print only even numbers" << endl;
+	cout << "	Non-CH = Print only uneven numbers" << endl;
+	cout << "	Compare = Calculate and compare the sum of even and sum of uneven numbers" << endl;
+	cout << "	quit = Close the app" << endl;
+	cout << "	FI = Apply the Goledn Proportion formula to the sequence" << endl;
+	cout << "	HELP = Print this block" << endl;
 	
 	for(int i=1;i<=93;i++)
 	{
@@ -44,7 +53,7 @@ int main(int argc, char** argv)
 	while(1)
 		{	
 			cout << endl;
-			cout << "Вввод: " << endl;
+			cout << "Input: " << endl;
 			string input;
 			cin >> input;	
 		
@@ -52,7 +61,7 @@ int main(int argc, char** argv)
 			{
 				for(int i=1;i<=93;i++)
 				{
-					cout << i << " число - " << in[i] << endl;
+					cout << i << " number - " << in[i] << endl;
 				}
 			}
 		
@@ -61,10 +70,10 @@ int main(int argc, char** argv)
 			
 			for(int i=1;i<=93;i++)
 			{
-				//ЧЁТНЫЕ	
+				//Г—ВЁГ’ГЌГ›Г…	
 				if(in[i]%10==2 || in[i]%10==4 || in[i]%10==6 || in[i]%10==8 || in[i]%10==0)
 				{
-					cout << "Число " << i << " является чётным: " << in[i] << endl;
+					cout << "Number " << i << " is even: " << in[i] << endl;
 					Sleep(100);
 				}
 			}
@@ -74,10 +83,10 @@ int main(int argc, char** argv)
 		{
 			for(int i=1;i<=93;i++)
 			{
-				//НЕЧЁТНЫЕ
+				//ГЌГ…Г—ВЁГ’ГЌГ›Г…
 				if(in[i]%10==1 || in[i]%10==3 || in[i]%10==5 || in[i]%10==7 || in[i]%10==9)
 				{
-					cout << "Число " << i << " является нечётным: " << in[i] << endl;
+					cout << "Number " << i << " is uneven: " << in[i] << endl;
 					Sleep(100);
 				}
 			}
@@ -105,35 +114,35 @@ int main(int argc, char** argv)
 					else if(in[i]%10==9) {sumN =+ in[i];}
 				}
 				Sleep(140);
-				cout << "Сумма чётных: " << sumCH  << endl;
-				cout << "Сумма нечётных: " << sumN << endl;
+				cout << "Evens' sum: " << sumCH  << endl;
+				cout << "Unevens' sum: " << sumN << endl;
 			
 				cout << endl;
 				if(sumCH > sumN)
 				{
-					cout << "Сумма чётных больше суммы нечётных на " << sumCH - sumN << endl;
+					cout << "Evens' sum is bigger than unevens' one in " << sumCH - sumN << endl;
 				}
 				else if(sumN > sumCH)
 				{
-					cout << "Сумма нечётных больше суммы чётных на " << sumN - sumCH << endl;
+					cout << "Unevens' sum is bigger than evens' one in " << sumN - sumCH << endl;
 				}
 				else if(sumCH==sumN)
 				{
-					cout << "Сумма чётных равна сумме нечётных: " << sumCH << " = " << sumN << endl;
+					cout << "Unevens' sum is equal to evens' one: " << sumCH << " = " << sumN << endl;
 				}
 				
 				cout << endl;
-				cout << "Сумма всех 94 чисел равна " << sumCH + sumN << endl;
+				cout << "Sum of all 94 numbers equals " << sumCH + sumN << endl;
 				cout << endl;
 				if(sumN<sumCH)
 				{
 					div = sumCH / sumN;	
-					cout << "Если разделить сумму чётных на сумму нечётных, то получится: " << div << endl;
+					cout << "If to divide evens' sum by unevens' one, we'll get " << div << endl;
 				} 
 				else if (sumN>sumCH)
 				{
 					div = sumN / sumCH;
-					cout << "Если разделить сумму чётных на сумму нечётных, то получится: " << div << endl;
+					cout << "If to divide unevens' sum by evens' one, we'll get " << div << endl;
 				}
 				
 			}
@@ -142,7 +151,7 @@ int main(int argc, char** argv)
 		if(input == "Certain")
 		{
 			int num = 0;
-			cout << "Число: ";
+			cout << "Number: ";
 			cin >> num;
 			cout << endl;
 			if(num>0 && num<=93)
@@ -168,18 +177,17 @@ int main(int argc, char** argv)
 		
 		if(input == "HELP")
 		{
-			cout << "Ряд Фиббоначи (до 93 числа)" << endl;
-	cout << "Разработчик: Горский Владислав, учащийся 7 класса <Б> ГБОУ школы № 1598" << endl;
-	cout << endl;
-	cout << "Доступные команды:" << endl;
-	cout << "	View = Вывести первые 93 числа ряда Фиббоначи" << endl;
-	cout << "	CH = Вывести только ЧЁТНЫЕ числа" << endl;
-	cout << "	Non-CH = Вывести только НЕЧЁТНЫЕ числа" << endl;
-	cout << "	Compare = Высчитать и сравнить суммы ЧЁТНЫХ и НЕЧЁТНЫХ чисел" << endl;
-	cout << "	quit = Выход из программы" << endl;
-	cout << "	Certain Число:(число) = Вывод определённого числа" << endl;
-	cout << "	FI = Применить формулу Золотого сечения к числам последовательности Фибоначчи" << endl;
-	cout << "	HELP = Вывести всю информацию о командах" << endl;
+			cout << "Fibonacci sequence (till the 93rd number)" << endl;
+			cout << "Copyright 2019 Vladislav Gorski\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License. \nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, \nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, \neither express or implied. See the License for the specific language governing permissions and limitations under the License." << endl;
+			cout << endl;
+			cout << "Commands:" << endl;
+			cout << "	View = Print the first 93 numbers of the Fibonacci sequence" << endl;
+			cout << "	CH = Print only even numbers" << endl;
+			cout << "	Non-CH = Print only uneven numbers" << endl;
+			cout << "	Compare = Calculate and compare the sum of even and sum of uneven numbers" << endl;
+			cout << "	quit = Close the app" << endl;
+			cout << "	FI = Apply the Goledn Proportion formula to the sequence" << endl;
+			cout << "	HELP = Print this block" << endl;
 		}
 	}
 	system("pause");
