@@ -1,19 +1,14 @@
 /**
 Copyright 2019 VladG24YT
-
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. 
 You may obtain a copy of the License at
    http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, 
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
 See the License for the specific language governing permissions and limitations under the License.
 */
 #include <iostream>
-#include <cstdlib>
-#include <fstream>
-#include <windows.h>
 #include <stdlib.h>
 
 using namespace std;
@@ -30,7 +25,7 @@ int main(int argc, char** argv)
 	unsigned long long int in[94];
 	
 	cout << "Fibonacci sequence (till the 93rd number)" << endl;
-	cout << "Copyright 2019 Vladislav Gorski\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License. \nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, \nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, \neither express or implied. See the License for the specific language governing permissions and limitations under the License." << endl;
+	cout << "Copyright 2019 Vladislav Gorski\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License. \nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, \nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, \neither express or implied. See the License for the specific language governing permissions and limitations under the License." << endl;
 	cout << endl;
 	cout << "Commands:" << endl;
 	cout << "	View = Print the first 93 numbers of the Fibonacci sequence" << endl;
@@ -74,7 +69,6 @@ int main(int argc, char** argv)
 				if(in[i]%10==2 || in[i]%10==4 || in[i]%10==6 || in[i]%10==8 || in[i]%10==0)
 				{
 					cout << "Number " << i << " is even: " << in[i] << endl;
-					Sleep(100);
 				}
 			}
 		}
@@ -87,7 +81,6 @@ int main(int argc, char** argv)
 				if(in[i]%10==1 || in[i]%10==3 || in[i]%10==5 || in[i]%10==7 || in[i]%10==9)
 				{
 					cout << "Number " << i << " is uneven: " << in[i] << endl;
-					Sleep(100);
 				}
 			}
 		}
@@ -113,7 +106,6 @@ int main(int argc, char** argv)
 					else if(in[i]%10==0) {sumCH =+ in[i];}
 					else if(in[i]%10==9) {sumN =+ in[i];}
 				}
-				Sleep(140);
 				cout << "Evens' sum: " << sumCH  << endl;
 				cout << "Unevens' sum: " << sumN << endl;
 			
@@ -178,7 +170,7 @@ int main(int argc, char** argv)
 		if(input == "HELP")
 		{
 			cout << "Fibonacci sequence (till the 93rd number)" << endl;
-			cout << "Copyright 2019 Vladislav Gorski\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License. \nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, \nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, \neither express or implied. See the License for the specific language governing permissions and limitations under the License." << endl;
+			cout << "Copyright 2019 Vladislav Gorski\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License. \nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, \nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, \neither express or implied. See the License for the specific language governing permissions and limitations under the License." << endl;
 			cout << endl;
 			cout << "Commands:" << endl;
 			cout << "	View = Print the first 93 numbers of the Fibonacci sequence" << endl;
