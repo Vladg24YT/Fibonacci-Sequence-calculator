@@ -1,8 +1,8 @@
 # Fibonacci-Sequence-calculator
 A C++ program for calculating the Fibonacci sequence
 
-**Really don't remember wich EXE is working, try all of them**<br>
-***`Made in Russia. Current version is 1.0.5 (translated)`***
+***`Made in Russia. Current version is 2.0`***<br>
+<i>Compiled using <b>`MinGW`</b></i>
 
 ### Screenshots of the code
 ![](https://github.com/Vladg24YT/Fibonacci-Sequence-calculator/blob/master/Код1.png "Code1")
